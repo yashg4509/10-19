@@ -15,11 +15,17 @@ public class ExamPracticeI1 implements MouseListener{
 	JButton blue = new JButton();
 	JButton green = new JButton();
 	
+	ExamPracticeI1 ep;
+	
 	public void generate() {
 		yellow.addMouseListener(this);
 		red.addMouseListener(this);
 		blue.addMouseListener(this);
 		green.addMouseListener(this);
+		yellow.setOpaque(true);
+		red.setOpaque(true);
+		blue.setOpaque(true);
+		green.setOpaque(true);
 		yellow.setBackground(Color.YELLOW);
 		red.setBackground(Color.red);
 		blue.setBackground(Color.BLUE);
@@ -70,19 +76,19 @@ public class ExamPracticeI1 implements MouseListener{
 	@Override
 	public void mousePressed(MouseEvent e) {
 		if(e.getSource() == yellow) {
-			speak("yellow");
+			ep.speak("yellow");
 		}
 		
 		if(e.getSource() == blue) {
-			speak("blue");
+			ep.speak("blue");
 		}
 		
 		if(e.getSource() == red) {
-			speak("red");
+			ep.speak("red");
 		}
 		
 		if(e.getSource() == green) {
-			speak("green");
+			ep.speak("green");
 		}
 		
 	}
